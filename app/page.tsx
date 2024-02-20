@@ -263,7 +263,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      {loading && <div className="z-50 absolute w-full h-full flex items-center justify-center bg-white">
+      {loading && <div className="z-50 absolute w-full h-full flex items-center justify-center bg-primary-foreground">
         Getting things ready . . . <Rings height={50} color='red' />
       </div>}
     </div>

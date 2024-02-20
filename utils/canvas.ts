@@ -29,24 +29,23 @@ export function drawOnCanvas(
       ctx.beginPath();
 
       // styling
-      ctx.fillStyle = `${name === "person" ? "#FF0F0F" : ""}`;
-      ctx.globalAlpha = 0.4; // fill opacity
+      ctx.fillStyle = name === "person" ? "#FF0F0F" : "#00B612";
+      ctx.globalAlpha = 0.4;
 
-      // check if camera is mirrored
       mirrored
         ? ctx.roundRect(ctx.canvas.width - x, y, -width, height, 8)
         : ctx.roundRect(x, y, width, height, 8);
 
-      // draw stroke
+      // draw stroke or fill
       ctx.fill();
 
       // text styling
       ctx.font = "12px Courier New";
-      ctx.fillStyle = "black";
+      ctx.fillStyle = 'black'
       ctx.globalAlpha = 1;
       mirrored
-        ? ctx.fillText(name, ctx.canvas.width - x - width, y, 20)
-        : ctx.fillText(name, x, y + 20);
+        ? ctx.fillText(name, ctx.canvas.width - x -width + 10, y + 20)
+        : ctx.fillText(name, x + 10 , y + 20);
     }
   });
 }

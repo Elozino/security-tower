@@ -12,7 +12,7 @@ import { toast } from 'sonner';
 import { beep } from '../utils/audio';
 import { RenderFeatureHighlightsSection } from '@/components/RenderFeatureHighlightsSection';
 import '@tensorflow/tfjs-backend-cpu'
-import '@tensorflow/tfjs-backend-cpu'
+import '@tensorflow/tfjs-backend-webgl'
 import * as cocossd from '@tensorflow-models/coco-ssd'
 import { ObjectDetection, DetectedObject } from '@tensorflow-models/coco-ssd'
 import { drawOnCanvas, resizeCanvas } from '@/utils/canvas';
